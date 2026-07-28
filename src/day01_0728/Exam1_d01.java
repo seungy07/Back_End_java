@@ -7,7 +7,7 @@
         // 한줄 주석
 */
 package day01_0728; // 패키지(폴더명) 이면서 클래스의 위치 식별용도
-public class Exam1 {
+public class Exam1_d01 {
     // public : 공개용 , 다른패키지에서도 사용 가능한 클래스 뜻 
     // class : 클래스 선언 사용하는 키워드 
     // Exam1 : 클래스명은 아무거나, 단] 첫글자는 대문자!!
