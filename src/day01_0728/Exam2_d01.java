@@ -36,11 +36,17 @@ public class Exam2_d01 {
         // 6) int : +-21억정도, 4byte, ****(정수) 리터럴 타입**
         int i1 = 2100000000; System.out.println(i1);
 
-        // 7) long : +- 21억 이상, 뒤에 L을 붙여야함  ,8byte
-        long l1 = 20000000000L; System.out.println(l1); // 21억 이상 넣으면 오류가 발생한다 (2백억은 int로 들어가서)
+        // 7) long : +- 21억 이상, 뒤에 L을 붙여야함  ,8byte **키보드로 입력한 정수는 int
+        long l1 = 20000000000L; System.out.println(l1); // 21억 이상 넣으면 오류가 발생한다 
 
+        //==== 실수 : 부동소수점 이용한 소수점 표현은 오차가 있으므로 정교환 소수점/계산 -> 라이브러리 이용 ====
+        // 8) flot : 소수점 8자리 표현, 4byte, *키보드로 부터 입력한 실수는 double 이므로 F/f 붙임
+        float f1 = 5.511331146425f; System.out.println(f1);
+        // 9) double :  소수점 17자리 표현 , 8byte **(실수) 리터럴 타입 **
+        double d1 = 0.21354687654532156; System.out.println(d1);
 
-
+        // 8가지 타입 ( 기본타입, 리터럴 저장 )
+        // vs 그외(String) 타입 ( 참조타입, 객체/배열/인터페이스 등등 )
 
     }
 
