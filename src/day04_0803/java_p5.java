@@ -77,12 +77,12 @@ public class java_p5 {
         for( ; ; ){
             System.out.print("1:입금 | 2:출금 | 3:잔고 | 4:종료 번호 입력: "); int 번호 = scan1.nextInt();
             if( 번호 == 1){System.out.print("입금액: "); int 입금액 = scan1.nextInt(); 잔고 += 입금액;}
-            if( 번호 == 2){
+            else if( 번호 == 2){
                 System.out.print("출금액: "); int 출금액 = scan1.nextInt(); 
                 if( 잔고 < 출금액){System.out.println("잔고 보다 큰 출금액은 출금 불가"); continue;
                 }else{잔고 -= 출금액;}}
-            if( 번호 == 3){System.out.printf("잔고> %d \n", 잔고); }
-            if( 번호 == 4){System.out.println("프로그램을 종료합니다. "); break;}
+            else if( 번호 == 3){System.out.printf("잔고> %d \n", 잔고); }
+            else if( 번호 == 4){System.out.println("프로그램을 종료합니다. "); break;}
         }
 
 
