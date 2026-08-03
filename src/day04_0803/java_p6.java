@@ -65,7 +65,8 @@ public class java_p6 {
                 if(구매수량 <= stock[i]){
                     System.out.println("구매 완료!"); stock[i] -= 구매수량; break;
                 }else{System.out.println("재고가 부족합니다"); break;}
-            }else if( i == products.length-1){System.out.println("없는 제품입니다."); } // 배열의 하나씩 보고도 같은 상품명이 없는 경우
+            }
+            else if( i == products.length-1){System.out.println("없는 제품입니다."); } // 배열의 하나씩 보고도 같은 상품명이 없는 경우
         }/* 풀이: boolean find = false  이용  상품명 찾으면 true 전환으로 없을시 조건으로 사용 */
 
     // [문제 9] 주어진 영화 이름과 평점 배열을 이용하여, 각 영화의 평점을 별(★, ☆)로 시각화하여 출력하는 프로그램을 작성하시오.(* 영화명과평점 인덱스가 같다는 가정 )
@@ -75,9 +76,9 @@ public class java_p6 {
         for(int i=0; i<=movieNames.length-1; i++){
             System.out.printf("%s", movieNames[i]);
             for(int j=1; j<=movieRatings[i]; j++){
-                System.out.print("★");}
+                System.out.print("★ ");}
             for(int k=1; k<= 10-movieRatings[i]; k++){
-                System.out.print("☆");
+                System.out.print("☆ ");
             }System.out.println();
         }
 
@@ -87,11 +88,6 @@ public class java_p6 {
     // 기본 요금: 최초 30분까지 1,000원
     // 추가 요금: 30분 초과 시, 매 10분마다 500원씩 추가
     // 일일 최대 요금: 20,000원 (아무리 오래 주차해도 20,000원을 초과할 수 없음)
-    // 출력 예시:
-    // 210어7125: 65분 주차, 최종 요금: 2500원
-    // 142가7415: 30분 주차, 최종 요금: 1000원
-    // 888호8888: 140분 주차, 최종 요금: 6500원
-    // 931나8234: 420분 주차, 최종 요금: 20000원
         String[] carNumbers = {"210어7125", "142가7415", "888호8888", "931나8234"};
         int[] usageMinutes = {65, 30, 140, 420};
         for(int i=0; i<=carNumbers.length-1; i++){
@@ -103,6 +99,7 @@ public class java_p6 {
             System.out.printf("%s: %d분 주차, 최종 요금: %d원\n", carNumbers[i],usageMinutes[i],주차요금 );
         }
 
+        
     }
 
 }
