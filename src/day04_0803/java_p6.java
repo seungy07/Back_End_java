@@ -66,7 +66,7 @@ public class java_p6 {
                     System.out.println("구매 완료!"); stock[i] -= 구매수량; break;
                 }else{System.out.println("재고가 부족합니다"); break;}
             }else if( i == products.length-1){System.out.println("없는 제품입니다."); } // 배열의 하나씩 보고도 같은 상품명이 없는 경우
-        }
+        }/* 풀이: boolean find = false  이용  상품명 찾으면 true 전환으로 없을시 조건으로 사용 */
 
     // [문제 9] 주어진 영화 이름과 평점 배열을 이용하여, 각 영화의 평점을 별(★, ☆)로 시각화하여 출력하는 프로그램을 작성하시오.(* 영화명과평점 인덱스가 같다는 가정 )
     // 요구 조건: 각 영화의 평점(10점 만점)만큼 꽉 찬 별(★)을, 나머지 점수만큼 빈 별(☆)을 출력합니다.
