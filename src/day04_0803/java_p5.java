@@ -2,7 +2,7 @@ package day04_0803;
 
 import java.util.Scanner;
 
-public class javja_p5 {
+public class java_p5 {
     public static void main(String[] args){
  
     // [문제 1] for문을 사용하여 1부터 10까지의 숫자를 한 줄에 하나씩 출력하는 프로그램을 작성하시오.
