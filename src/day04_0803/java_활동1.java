@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class java_활동1 {
     public static void main(String[] args) {
-        int[] array = new int[0]; 
+        int[] array = new int[0];  // for 안에들어가면 계속 초기화 됨
         for(int i=0; ; i++){
             Scanner scan = new Scanner(System.in);
 
