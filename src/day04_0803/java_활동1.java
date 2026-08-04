@@ -5,10 +5,10 @@ import java.util.Scanner;
 
 public class java_활동1 {
     public static void main(String[] args) {
+        int[] array = new int[0]; 
         for(int i=0; ; i++){
             Scanner scan = new Scanner(System.in);
 
-            int[] array = new int[i]; 
             System.out.printf("\n현재배열 [크기: %d]:" + Arrays.toString(array)+ "\n", i);
             System.out.print("[1. 요소 추가 | 2. 인덱스로 삭제 | 0. 종료]메뉴를 선택하세요:"); int 메뉴번호 = scan.nextInt();
             // 배열 복사? 
@@ -22,7 +22,7 @@ public class java_활동1 {
                 }
                 array1[array1.length-1]= 추가정수; // 끝에 추가 부분
                 // System.out.println(Arrays.toString(array1)); 새로운 배열의 정상적으로 추가,, 기존 배열의 길이가 짧음
-                array = array1; // 값이 안들어가는데
+                array = array1; 
 
             }else if(메뉴번호 == 2){
                 System.out.printf("삭제할 인덱스 번호(0~%d)를 입력하세요: ",array.length-1); int 삭제인덱스 = scan.nextInt();
