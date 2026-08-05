@@ -63,8 +63,8 @@ public class java_p7 {
         System.out.printf("\n로그인 후 상태: %b", member.isLogin);
 
 // [문제 7] Television 클래스를 만드세요. channel(정수)과 volume(정수) 멤버 변수를 가집니다.
-        Television television = new Television(); television.channel = 7; television.volume = 20;
-        television.channel=11; television.volume=2;
+        Television television = new Television(); television.channel = 7; television.volume = 20; // 클래스 생성시 초기값 설정 가능
+        television.channel=11; television.volume-=2;
         System.out.printf("\n변경된 채널: %d, 변경된 볼륨: %d",television.channel, television.volume);
         
 // [문제 8] Player 클래스를 만드세요. name(문자열), power(정수), speed(정수) 멤버 변수를 가집니다.
