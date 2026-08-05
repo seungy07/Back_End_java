@@ -10,7 +10,7 @@ public class java_p5 {
 
     // [문제 2] for문을 사용하여 10부터 1까지의 숫자를 역순으로 출력하는 프로그램을 작성하시오.
         for(int i=10; i<=1; i--){System.out.println(i);}
-        int 문제2 = 10; while(문제2<=1){ System.out.ptintln(문제2); 문제2--; }
+        int 문제2 = 10; while(문제2<=1){ System.out.println(문제2); 문제2--; }
 
     // [문제 3] for문을 사용하여 1부터 50까지 모든 정수의 합계를 구하여 최종 결과를 출력하시오., 출력 예시: 1부터 50까지의 합계: 1275
         int 합계=0;
