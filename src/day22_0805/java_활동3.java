@@ -2,6 +2,11 @@ package day22_0805;
 
 import java.util.Scanner; // Scanner 입력 import 부분
 
+
+// 1. 화면에 대한 스케치(피그마 / 프로토타입)
+// 2. 메모리/설계
+// 3. 기능 설계
+
 class Post { //post 클래스 
     String content;
     String writer;
@@ -39,7 +44,7 @@ public class java_활동3 {
 
                 for (int index = 0; index <= posts.length - 1; index++) { // posts 배열의 보기
                     if (posts[index] == null) { // 빈곳에 저장
-                        posts[index] = post;
+                        posts[index] = post; // [ new post(), new post(),.. ] 이런식으로 만드는 것 각각을 객체로 만듬
                         result = true; // 저장성공 결과
                         break; // 배열 돌아보는 부분 탈출
                     }
@@ -60,7 +65,7 @@ public class java_활동3 {
             }
             
         }
-    }
-}
+        
+    }}
 
 

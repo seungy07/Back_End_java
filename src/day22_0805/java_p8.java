@@ -16,9 +16,13 @@ class Rectangle{
 
 // [문제 3] BankAccount 클래스를 만드세요. (accountNumber, ownerName, balance 멤버 변수) *멤버변수
 class BankAccount{
-    String acconutNumber; String ownerName; int balance;
+    // 클래스가 같더라도 인스턴스는 다르다.
+    String acconutNumber; String ownerName; int balance; // 멤버변수(필드): 객체가 생성되면 객체네 사용할 변수 뜻
     BankAccount(String acconutNumber, String ownerName, int balance){
         this.acconutNumber=acconutNumber; this.ownerName=ownerName; this.balance=balance;}
+    // 생성자란? 객체(인스턴스) 생성할 때 초기값 대입
+    // 매개변수? 외부로부터 생성자/메소드에게 전달되는 값 저장하는 변수
+    // 관례적으로 생성자의 매개변수는 멤버변수명과 동일하게 씀 this로 구별
 }
 // [문제 4] Goods 클래스를 만드세요. (name, price 멤버 변수) *멤버변수
 class Goods{
