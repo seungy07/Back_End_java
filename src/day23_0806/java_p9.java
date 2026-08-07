@@ -1,4 +1,4 @@
-package day22_0805;
+package day23_0806;
 
 // [문제 1] Printer
 class Printer{
@@ -114,5 +114,4 @@ public class java_p9 {
         System.out.println(new ParkingLot().calculateFee(65));
         System.out.println(new ParkingLot().calculateFee(140));
     }
-
 }

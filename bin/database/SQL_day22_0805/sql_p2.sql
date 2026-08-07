@@ -2,6 +2,7 @@
 DROP DATABASE IF EXISTS practice2;
 CREATE DATABASE practice2;
 use practice2;
+
 -- [문제 1]아래 조건에 맞는 members 테이블을 생성하는 SQL을 작성하세요.
 -- 테이블명: members
 -- 컬럼 정보
