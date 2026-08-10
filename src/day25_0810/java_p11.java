@@ -25,7 +25,6 @@ public class java_p11 {
         cha.add("A"); cha.add("B"); cha.add("C"); cha.add("D"); cha.add("E");
         cha.remove(2); System.out.println(cha);
     
-
     // [문제 5] "자바", "파이썬", "C++"를 요소로 가지는 ArrayList를 생성하세요.
         ArrayList<String> 문제5 = new ArrayList<>();
         문제5.add("자바"); 문제5.add("파이썬"); 문제5.add("C++");
