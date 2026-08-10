@@ -1,6 +1,6 @@
 package day24_0807;
 
-public class exam2_d25 {
+public class exam2_d24 {
     public static void main(String[] args) {
         // [1] setter, getter 이용한 간접접근 (직접접근 차단)
         User u1 = new User(); // 객체만들기 )인스턴스 생성

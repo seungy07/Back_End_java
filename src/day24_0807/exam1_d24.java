@@ -2,7 +2,7 @@ package day24_0807;
 
 import day24_0807.package1.A;
 
-public class exam1_d25 {
+public class exam1_d24 {
     public static void main(String[] args) {
         /*
             접근제한자 : 클래스, 멤버변수, 메소드, 생성자 등 호출 (폴더/클래스) 접근제한 만들기

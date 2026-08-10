@@ -1,6 +1,6 @@
 package day24_0807;
 
-public class exam3_d25 {
+public class exam3_d24 {
     int a;
     void b(){};
     public static void main(String[] args) {
@@ -10,7 +10,7 @@ public class exam3_d25 {
         // b();
         // static 가 아닌 얘들은 인스턴스를 할당하여 접근
         // static 가 할당이 되면 접근 가능
-        exam3_d25 exam = new exam3_d25();
+        exam3_d24 exam = new exam3_d24();
         System.out.println(exam.a);
         exam.b();
 
