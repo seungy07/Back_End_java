@@ -20,8 +20,14 @@ public class BoardDao {
         // 2. 리스트 저장(오늘만)
         boardList.add(boardDto);
         return true;
+    }
 
-
+    // [2] 게시물 전체 조회 로직
+    public ArrayList<BoardDto> findAll(){
+        // 1. controller에게 매개변수 받는다. 현재는 없음
+        // * select 이용한 DB 조회
+        // 2. 리스트 전체 반환
+        return boardList;
     }
     
 }

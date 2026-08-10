@@ -1,5 +1,7 @@
 package day25_0810.종합예제.controller;
 
+import java.util.ArrayList;
+
 import day25_0810.종합예제.model.dao.BoardDao;
 import day25_0810.종합예제.model.dto.BoardDto;
 
@@ -19,7 +21,15 @@ public class BoardController {
         boolean result = bd.save( boardDto );
         // 3. dao에게 받은 결과를 view에게 응답하기
         return result;
+    }
 
+    // [2] 게시물 전체 조회 컨트롤러
+    public ArrayList<BoardDto> findAll(){
+        // 1. view에게 매개변수 받는다. 현재는 없음
+        // 2. 세션/쿠키 관리  * 지금은 할게 없다
+        // 2. dao 에게 요청 하고 응답을 받느다
+        ArrayList<BoardDto> result = bd.findAll();
+        return result;
     }
     
 }
