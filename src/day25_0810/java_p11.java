@@ -1,8 +1,8 @@
 package day25_0810;
 
-
 import java.util.ArrayList;
 import java.util.Scanner;
+
 
 public class java_p11 {
     public static void main(String[] args) {
@@ -60,12 +60,10 @@ public class java_p11 {
 }
 // [문제 6] title(문자열)과 author(문자열) 멤버 변수를 가진 Book 클래스를 만드세요.
 class Book{
-    String title; String author;
-
+    String title;  String author;
+    // private 시 getter 이용도 가능
     Book(String title, String author) {
         this.title = title;
         this.author = author;
     }
-    
-    
 }
