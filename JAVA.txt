@@ -187,9 +187,9 @@
         예시] 식당 - 역할별로 담당 분리 ( 단일 책임 원칙)
     5. 사용처: 웹/앱 백엔드 사용.
     6. 레이어/계층
-        View : 입출력 담당 , HTML/CSS/JS/REACT/FLUTTER 등
-        Controller : model - view 사이에 제어 / 로직 / 유효성검사 / 전달 담당, JAVA/PYTHON/NODE.JS
-        Model : 데이터 관리 담당 , JAVA/PYTHON/NODE.JS 
+        - View : 입출력 담당 , HTML/CSS/JS/REACT/FLUTTER 등
+        - Controller : model - view 사이에 제어 / 로직 / 유효성검사 / 전달 담당, JAVA/PYTHON/NODE.JS
+        - Model : 데이터 관리 담당 , JAVA/PYTHON/NODE.JS 
     7. 이동객체
         DTO : 서로 다른 레이어/계층 간의 데이터 객체, setter and getter 지원
         VO : 서로 다른 레이어/계층 간의 데이터 객체, getter 지원
@@ -205,5 +205,25 @@
                 -> dto 폴더
             -> AppStart 클래스(최상위)
         
-
+[ ArrayList ]
+배열 : 여러개 (동일한 타입)자료들을 저장하는 타입, 정적길이
+            ArrayList 클래스 : 컬렉션(수집) 프레임(틀)워크(일), 자료 수집관련 클래스/기능 제공
+                    목적: 가변길이, 배열 관련된 기능(메소드) 제공한다. <편리하다>
+                사용법
+                    ArrayList<제너릭타입> 변수명 = new ArrayList<>();
+                    - 제너릭타입: 리스트내 저장할 요소들의 타입, 즉] <String> 리스트에 여러개 String 저장
+                    - 주의할점: <제너릭타입>은 기본타입이 불가능하다. int -> Integer 래퍼타입(기본 타입을 클래스타입 변환 사용)
+                                                                        -멤버변수,메소드 제공
+                주요메소드
+                    1. .add(자료) : 리스트 요소 추가
+                    2. .add(인덱스, 자료) : 인덱스 위치 삽입 (중간 삽입)
+                    3. .set(인덱스, 자료) : 인덱스 위치 값 수정
+                        - 리스트명.get(1) = "수정"  *불가  , 배열명[1] = "수정" ok
+                    4. .size( ) : 리스트내 요소 개수 반환
+                    5. .get(인덱스) : 인덱스 위치 요소 반환
+                    6. .remove(인덱스) : 인덱스위치 요소 삭제
+                    7. .clear( ) : 리스트내 요소 전체 삭제
+                    8. .indexOf( 찾을값 ) : 리스트내 존재하면 인덱스 반환, 없으면 -1 반환
+                    9. .contains( 찾을 값 ) : 값 존재하면 true ,  없으면 false
+                    10. .isEmpty( ) : 리스트 비어있으면 true , false
 
