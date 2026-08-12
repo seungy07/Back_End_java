@@ -67,8 +67,33 @@ class MysqlDao implements DataAccessObject{
 }
 // [문제 7] 익명 구현 객체
     // 1. "환영합니다."를 출력하는 welcome() 추상 메소드를 가진 Greeting 인터페이스를 만드세요.
-       
+interface Greeting{ void welcome();}
 
+// [문제 8] 디폴트 메소드 (Default Method)
+    // 1.Device 인터페이스에, turnOn(), turnOff() 추상 메소드와 함께, public default void setMute(boolean mute) 디폴트
+    // 메소드를 추가하세요. 디폴트 메소드는 "무음 처리합니다."를 출력하도록 구현합니다.
+    // 2.Television 클래스가 Device를 구현하도록 하되, turnOn(), turnOff()만 오버라이딩하세요.
+interface Device{
+    void turnOn(); void turnOff();
+    public default void setMute(boolean mute){System.out.println("무음 처리합니다");};}
+class Television implements Device{
+    @Override
+    public void turnOff() {
+        System.out.println("전원 Off");
+    }
+    @Override
+    public void turnOn() {
+        System.out.println("전원 On");
+    }
+}
+
+// [문제 9] 정적 메소드 (Static Method)
+    // 1. Calculator 인터페이스를 만들고, 두 정수의 합을 반환하는 plus(int x, int y) 정적 메소드를 정의하세요.
+interface Calculator{
+    public static int plus(int x , int y){
+        return x+y;
+    }
+}
 
 public class java_p13 {
     public static void main(String[] args) {
@@ -118,6 +143,12 @@ public class java_p13 {
     // 2. main 함수에서, 별도의 클래스 파일을 만들지 않고, Greeting 인터페이스 타입의 변수를 선언하면서 익명 구현 객체를 생성하여
     // welcome() 메소드를 즉석에서 구현하고 호출하세요.
     // 예] Greeting g = new Greeting() { ... }; 
+        Greeting greeting = new Greeting() {
+            @Override
+            public void welcome() {
+                System.out.println("익명구현");
+            }
+        };  greeting.welcome();
 
 
     // [문제 8] 디폴트 메소드 (Default Method)
@@ -126,11 +157,14 @@ public class java_p13 {
     // 2.Television 클래스가 Device를 구현하도록 하되, turnOn(), turnOff()만 오버라이딩하세요.
     // 3.main 함수에서 Television 객체를 생성하고, turnOn(), turnOff()와 함께 디폴트 메소드인 setMute()도 호출되는 것을 확
     // 인하세요 
+        Television television = new Television();
+        television.turnOff(); television.turnOn(); television.setMute(false);
 
 
     // [문제 9] 정적 메소드 (Static Method)
     // 1. Calculator 인터페이스를 만들고, 두 정수의 합을 반환하는 plus(int x, int y) 정적 메소드를 정의하세요.
     // 2. main 함수에서 Calculator 인터페이스를 구현하는 클래스나 객체를 만들지 않고, Calculator.plus(10, 20)과 같이 인터페이
     // 스 이름으로 직접 정적 메소드를 호출하여 결과를 출력하세요. 
+        System.out.println(Calculator.plus(20, 40));
     
 }}
