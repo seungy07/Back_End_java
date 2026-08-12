@@ -8,7 +8,13 @@ public class exam2 {
         KeyBoard mKeyBoard;
         // 4. 스포츠게임 실행하면
         mKeyBoard = new SportsGame();
-        mKeyBoard.aKey(); // 슛
+        // 5. a키
+        mKeyBoard.aKey(); // 슛 출력
+        // 6. 스포츠게임 종료하고 액션게임 실행하면
+        mKeyBoard = new ActionGame(); // 업케스팅 (변수는 단 하나의 자료만 저장)
+        mKeyBoard.aKey(); // 공격 출력
+
+        // 즉] 다형석 표현: 1) 상속 extends   2) 인터페이스 implements
         
     }
 }

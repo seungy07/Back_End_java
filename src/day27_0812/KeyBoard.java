@@ -1,5 +1,6 @@
 package day27_0812;
 
+// 인터페이스는 방법의 규칙만
 public interface KeyBoard {
     // 폴더 -> new java file -> interface 생성
     // 1. 상수, 초기값 필수
