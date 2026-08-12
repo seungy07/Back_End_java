@@ -227,3 +227,9 @@
                     9. .contains( 찾을 값 ) : 값 존재하면 true ,  없으면 false
                     10. .isEmpty( ) : 리스트 비어있으면 true , false
 
+08 / 11 
+[ 상속 ]
+- Object : 모든 클래스 중 최상위 클래스
+    - extends : class 하위클래스명 extends 상위클래스 { } 
+    - instanseof : 하위클래스명 instanseof 상위클래스  -> 포함하면 true 아니면 false
+
