@@ -42,6 +42,8 @@ public class exam2 {
             System.err.println( rsSet.getString("name") ); // rsSet.get타입("속성명");  
             System.out.println("레코드 조회 성공");
 
+            // JDBC( 레거시 ) 기본 ---> 마이바티스 / JPA / SQL 매핑 나옴?
+
 
 
         }catch( ClassNotFoundException e){
