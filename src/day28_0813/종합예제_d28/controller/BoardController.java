@@ -17,6 +17,22 @@ public class BoardController {
         boolean result = bd.save(boardDto);  // view 전달받은 매개변수를 DAO에게 전달 
         return result;  // DAO에게 받은 결과를 view 반환
     }
+
+    // [2] 전체출력 controller
+    public ArrayList<BoardDto> findAll(){
+        ArrayList<BoardDto> result = bd.findAll();
+        return result; 
+    }
+// 이번엔 중개 역할만 함, 전체적인 흐름을 보기위해
+    // [3] 개별수정 controller
+    public boolean update(BoardDto boardDto){
+        return bd.update( boardDto );
+    }
+
+    // [4] 삭제
+    public boolean delete(int no){
+        return bd.delete(no);
+    }
    
 
     

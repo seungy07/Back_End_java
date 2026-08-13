@@ -1,0 +1,8 @@
+DROP DATABASE IF EXISTS practice_db;
+CREATE DATABASE practice_db;
+USE practice_db;
+CREATE TABLE practice (
+    pno INT AUTO_INCREMENT PRIMARY KEY,
+    pname VARCHAR(50) NOT NULL,
+    pdate DATETIME DEFAULT NOW()
+);
