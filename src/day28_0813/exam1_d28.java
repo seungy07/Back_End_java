@@ -58,15 +58,23 @@ public class exam1_d28 {
         }catch( InputMismatchException e ){System.out.println("정수만 입력" + e);} // 예외코드시 예외처리 코드 // 프로그램 종료가 안됨
         catch( NumberFormatException e){System.out.println("타입변환 오류" + e);}
         catch( Exception e ){ // 다중 catch에서 마지막에 Exception 사용하여 그외 처리한다
-            System.out.println("마지막 예외");  // Exception  가장 최하위에 !!
+            System.out.println("마지막 예외");  // Exception  가장 최하위에 !!  ( finally 위에 )
         // [4] finally: 예외가 발생 여부 상관없이 무조건 실행되는 구역, 외부 프로그램과 연동을 종료하는 코드로 사용
         }finally{ System.out.println(" 무조건실행한다"); }
-
         
-
-
-
-
+        // * try{ 예외가 발생할 것 같은 코드 }catch( 예외클래스명 변수명 ){ }catch( 예외클래스명 변수명 )finally{ }
+        
+        // [5] 예외 던지기 (떠넘기기),  *예외반환*: 해당 메소드를 호출한 곳으로 예외 반환
+        try{  // 예외가 반환에 따라 예외 처리, 일반예외란?
+            method1();
+        }catch(Exception e){System.out.println("메소드 호출시 예외 발생"+e );}    
+    } // main 함수 밖
+    // 7. 예외 발생시 발생한 곳에서 try_catch 가 아닌 해당 함수를 반환
+    public static void method1() throws ClassNotFoundException { // ㄴthrows ClassNotFoundException 밑에 코드에서 빨간줄
+        // 예외 발생 코드
+        Class.forName("java.lang.Spring");  // 호출한곳으로 예외를 떠넘기기 가능
     }
+
+
     
 }
