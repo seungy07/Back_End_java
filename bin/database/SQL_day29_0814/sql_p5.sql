@@ -62,4 +62,5 @@ select 제품명 from product LEFT OUTER JOIN stock on product.제품번호_pk =
 select 카테고리명, sum(재고수량) 총재고수량 from pcategory inner join product on pcategory.카테고리번호_pk = product.카테고리번호_fk
     inner join stock on product.제품번호_pk = stock.제품번호_fk GROUP BY 카테고리명;
 
--- [문제 9] 각 제품별로 총 재고 수량을 조회하고, 총 재고 수량이 많은 순서대로 정렬하여 제품명과 총재고수량을 표시하세요. (조회결과: 6개 레코드)
+-- [문제 9] 각 제품별로 총 재고 수량을 조회하고, 총 재고 수량이 많은 순서대로 정렬하여 제품명과 총재고수량을 표시하세요. (조회결과: 6개 
+SELECT 제품명, sum(재고수량) 총재고수량 FROM product INNER JOIN stock on product.제품번호_pk = stock.제품번호_fk GROUP BY 제품명 ORDER BY 총재고수량 DESC;
