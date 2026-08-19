@@ -55,6 +55,8 @@ public class Exam2 {
         System.out.println( localDateTime2.getDayOfMonth() );    // 19(일) 
         System.out.println( localDateTime2.getSecond() ); // 30(초)
 
+        
+
 
     }
     
