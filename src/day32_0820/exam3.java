@@ -1,7 +1,9 @@
 package day32_0820;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class exam3 {
     public static void main(String[] args) {
@@ -35,6 +37,19 @@ public class exam3 {
         for(String str : set1){System.out.println(str);}
         // 3. forEach문 지원  , 컬렉션객체.forEacj( (반복변수명)-> { } );
         set1.forEach( (str) -> {} );
+        // - 활용처: Set ( JDBC ResultSet )
+        
+        Iterator<String> 순회자 = set1.iterator();  // 인덱스가 아닌 자료들을 순회하는 인터페이스 반환
+        while( 순회자.hasNext()){ }
+
+        // 11.  TreeSet 이용한 자동 정렬 : 이진트리(자료구조)
+        TreeSet< Integer > set2 = new TreeSet<>();
+        set2.add(50); set2.add(70); set2.add(60);
+        System.out.println( set2 );  // 자동 정렬 적용, 기본값 오름차순
+        // descendingSet 메소드는 Set 인터페이스내 추상메소드 없다
+        System.out.println( set2.descendingSet() );  // 내림차순으로 정렬 [70, 60, 50]
+
+
     }
     
 }
