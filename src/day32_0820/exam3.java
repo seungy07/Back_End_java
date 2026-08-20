@@ -38,9 +38,12 @@ public class exam3 {
         // 3. forEach문 지원  , 컬렉션객체.forEacj( (반복변수명)-> { } );
         set1.forEach( (str) -> {} );
         // - 활용처: Set ( JDBC ResultSet )
-        
+
         Iterator<String> 순회자 = set1.iterator();  // 인덱스가 아닌 자료들을 순회하는 인터페이스 반환
-        while( 순회자.hasNext()){ }
+        while( 순회자.hasNext()){   // 인터페이스 이용한 다음 자료 확인
+            System.out.println( 순회자.next() ); // 다음자료 꺼내기 지원
+         }  // hashNext(): 목록(컬렉션)에서 자료 하나씩 이동 꺼내기(꺼내는 자료가 저장된 순서)  < 순서보장없음 >
+        // 즉] 위 코드 이용한 향상된 for문 / forEach / ResultSet 만들어졌다
 
         // 11.  TreeSet 이용한 자동 정렬 : 이진트리(자료구조)
         TreeSet< Integer > set2 = new TreeSet<>();
