@@ -5,7 +5,7 @@ import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class java_p14_5번까지 {
+public class java_p_5번까지 {
     // [문제 5] throws로 예외 떠넘기기
         // Thread.sleep(1000); 코드를 포함하는 static void pauseOneSecond() 메소드를 만드세요.
     static void pauseOneSecond() throws InterruptedException{
