@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class day11_p {
+public class java_p14 {
     
     static Scanner scan = new Scanner(System.in);
     public static void main(String[] args) {
