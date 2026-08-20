@@ -2,7 +2,7 @@ package day32_0820;
 
 public class java_p15 {
     public static void main(String[] args) {
-        
+
     // [문제 1] 제네릭 Box<T> 기본 활용
     // 상황: 타입별 클래스(Box1, Box2)를 하나의 제네릭 클래스로 통합한다.
 
