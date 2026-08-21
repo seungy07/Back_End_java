@@ -10,6 +10,10 @@ public class exam3 {
             멀티 태스킹: 두 가지 이상의 작업을 동시에 처리
                 - 멀티 프로세스: 운영체제가 여러개 프로세스를 동시에 실행하는 구조 
                 - 멀티 스레드: 하나의 프로세스내 여러개 흐름 작업 실행하는 구조
+
+            [ 스레드 ] : 하나의 프로세스내 최소 단위 또는 실행 흐름 단위
+                - CPU가 (<--운영체재-->) 프로세스내 스레드를 통해 코드를 순차적으로 처리
+            main함수란?  JAVA 내 단일 스레드 환경 main메소드가 제공한다
         */
         // [1] 단일(싱글) 스레드 : (컴파일된) 코드들을 실행 흐름 단위 1개일 때
         // -> main 메소드가 main스레드 제공. (프로그램 당 1개 이상 존재)
@@ -24,9 +28,49 @@ public class exam3 {
             System.out.println("띵");
             try{Thread.sleep(1000);}catch( Exception e){ }
         }
+
+        // [2] 멀티스레드1: 익명구현체, new 인터페이스타입( ){ 오버라이딩 };
+        Runnable runnable = new Runnable() {
+            // 새로운(작업) 스레드가 처리할 메소드 = run() 오버라이딩(재정의)
+            @Override
+            public void run() {
+                for(int i=1; i<=5;i++){
+                    System.out.println(">>>첫번째 스레드: " +i);
+                    try{Thread.sleep(1000);}catch( Exception e){ }
+                }
+            }
+        }; // 익명구현체 구현 끝
+        Thread thread1 = new Thread( runnable ); // new Thread( 익명구현체 );
+        thread1.start(); // 새로운 스레드가 run() 메소드 호출 = start( ), Main / Task1 -> 스레드 2개
+    
+        // [3] 멀티스레드2: 구현체
+        작업스레드2 작업스레드2 = new 작업스레드2();
+        Thread thread2 = new Thread(작업스레드2);
+        thread2.start();  // Main / Task1 / Task2 (3개)
+
+        // [4] 멀티스레드3: 상속
+        작업스레드3 thread3 = new 작업스레드3();
+        thread3.start(); // Main/ Task1 / Task2 / Task3 총 4개 스레드 = 병렬처리( 처리 순서 보장 없다 )
         
 
 
     }
-    
 }
+class 작업스레드3 extends Thread{
+    @Override
+    public void run() {
+        for(int i=1; i<=5;i++){
+            System.out.println(">>3번째 새로운 스레드: " + i);
+            try{Thread.sleep(1000);}catch( Exception e){ }
+        }
+    }
+}
+class 작업스레드2 implements Runnable{
+    @Override
+    public void run() {
+        for(int i=1; i<=5;i++){
+            System.out.println(">>2번째 새로운 스레드: " + i);
+        }
+    }
+}
+
