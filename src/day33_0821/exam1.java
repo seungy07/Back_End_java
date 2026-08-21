@@ -23,7 +23,7 @@ public class exam1 {
         // 1) .put( key, value ): key/value 한쌍 엔트리 추가
         map.put("유재석", 95);  // "유재석"이라는 키로 95값 저장
         map.put("강호동", 100);
-        map.put("신동ㅇㅂ", 78);  
+        map.put("신동엽", 78);  
         map.put("유재석", 80);  // 주의할점: 기존에 존재하면 Key 있으면 value 수정
         System.out.println( map );  // {유재석=80, 강호동=100, 신동ㅇㅂ=78}
 
@@ -43,7 +43,7 @@ public class exam1 {
         // 7) .entrySet() : 모든 엔트리 반환
         System.out.println( map.entrySet() );
         // 8) .clear( ) : 모든 엔트리 삭제
-        map.clear(); System.out.println(map);
+        // map.clear(); System.out.println(map);
         // 9) .isEmpty( ) : 엔트리가 1개도 없으면 true / false
         System.out.println( map.isEmpty() );
         // * 활용처: 1] JSON <-- --> DTO/MAP(JAVA)  2] 자료구조(암호화) 등
