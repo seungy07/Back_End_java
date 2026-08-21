@@ -1,7 +1,9 @@
 package day32_0820;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -51,6 +53,15 @@ public class exam3 {
         System.out.println( set2 );  // 자동 정렬 적용, 기본값 오름차순
         // descendingSet 메소드는 Set 인터페이스내 추상메소드 없다
         System.out.println( set2.descendingSet() );  // 내림차순으로 정렬 [70, 60, 50]
+
+         // <?>는 "어떤 타입이든 다 들어올 수 있는 와일드카드(조커) 타입"
+        List<InventorySlot<?>> inventory = new ArrayList<>();
+        // ? 와일드 카드 타입 사용한경우 ( String/Double 등등 다양한 제네릭 타입 사용하기 위해서)
+        InventorySlot<String> slot20 = new InventorySlot();
+        InventorySlot<Double> slot222 = new InventorySlot();
+        // ? 와일드 카드 타입인 경우 제네릭타입 받을수 있다
+        inventory.add(slot20);
+        inventory.add(slot222);
 
 
     }
