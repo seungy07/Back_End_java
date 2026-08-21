@@ -11,6 +11,7 @@ public class exam1 {
                 List<BoardDto> list = new ArrayList<>();
                 - List 인터페이스 만들때 (정의)타입을 정하지 않고 List 인터페이스 사용할 때 BoardDto 타입 정함.
                 - 정의/만들기 class 클래스명{}, 사용/호출: 클래스명 변수명;
+
             [ 컬렉션프레임워크 ]
                 List 인터페이스 : 중복허용, 인덱스(순서) 보장  ArrayList, LinkedList, Vector 등
                 Set 인터페이스  : 중복불가, 인덱스(순서) 없다., HashSet, TreeSet 등
@@ -44,7 +45,7 @@ public class exam1 {
         System.out.println( map.entrySet() );
         // 8) .clear( ) : 모든 엔트리 삭제
         // map.clear(); System.out.println(map);
-        // 9) .isEmpty( ) : 엔트리가 1개도 없으면 true / false
+        // 9) .isEmpty( ) : 엔트리가 1개도 없으면 true / false 
         System.out.println( map.isEmpty() );
         // * 활용처: 1] JSON <-- --> DTO/MAP(JAVA)  2] 자료구조(암호화) 등
 
@@ -56,7 +57,6 @@ public class exam1 {
         // (3) .forEach( (반복변수명) -> { } );
         map.keySet().forEach( (key)-> {System.out.println(key+ ":"+ map.get(key));} );
 
+
     }
-        
-    
 }
