@@ -6,9 +6,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
 public class Exam2 {
-    /**
-     * @param args
-     */
     public static void main(String[] args) {
         /*
             스레드 풀: 매번 새로운 스레드 생성하지 않고 미리 일정한 스레드를 풀(pool)에서 생성
