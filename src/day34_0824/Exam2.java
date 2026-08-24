@@ -44,7 +44,6 @@ public class Exam2 {
         // [5] 구현체 start
         Thread thread = new Thread(runnable);
         thread.start();
-        
     }
 }
 // [2] 작업(요청) 스레드
