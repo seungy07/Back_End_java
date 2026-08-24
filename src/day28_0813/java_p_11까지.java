@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class java_p14_11까지 {
+public class java_p_11까지 {
     
 // [문제 6] practice 데이터베이스와 직접 연동하는 PracticeDao 구조 설계
         // 1.PracticeDao 클래스 내부에서 직접 데이터베이스 연동(Connection)을 처리하세요.
@@ -12,8 +12,8 @@ public class java_p14_11까지 {
         // 3. getInstance() 메소드를 통해 단 하나의 PracticeDao 인스턴스를 반환하도록 구현하세요.
 
     private Connection conn;
-    private static final java_p14_11까지 instance = new java_p14_11까지();
-    private java_p14_11까지() {
+    private static final java_p_11까지 instance = new java_p_11까지();
+    private java_p_11까지() {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             String url = "jdbc:mysql://127.0.0.1:3306/mydb0813";
